@@ -1,4 +1,7 @@
-from django.http import HttpResponse
+from django.urls import path
 
-def index(request):
-  return HttpResponse("Hello, World! You're at polls index.")
+from . import views
+
+urlpatterns = [
+  path("", views.index, name="index"),
+]
