@@ -31,6 +31,10 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+# 'python3 manage.py migrate'
+# The 'migrate' command looks at the INSTALLED_APPS setting and 
+#   creates any necessary database tables according to the database settings 
+#     in your mysite/settings.py file 
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
