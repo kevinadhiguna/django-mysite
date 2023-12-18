@@ -36,12 +36,13 @@ ALLOWED_HOSTS = []
 #   creates any necessary database tables according to the database settings 
 #     in your mysite/settings.py file 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
+  'polls.apps.PollsConfig', # Calling 'PollsConfig' class in polls/apps.py
+  'django.contrib.admin',
+  'django.contrib.auth',
+  'django.contrib.contenttypes',
+  'django.contrib.sessions',
+  'django.contrib.messages',
+  'django.contrib.staticfiles',
 ]
 
 MIDDLEWARE = [
