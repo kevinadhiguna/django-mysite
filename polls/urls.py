@@ -2,6 +2,10 @@ from django.urls import path
 
 from . import views
 
+# One can take advantage of 'app_name' to set the application namespace
+#   (since a project can contain ten or even more apps in it):
+app_name = "polls"
+
 urlpatterns = [
   # ex: /polls/
   path("", views.index, name="index"),
