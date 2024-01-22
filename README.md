@@ -1,6 +1,6 @@
-# Django - My site
+# Django - My site (Polling website)
 
-Django (v4.2.8) tutorial on official docs.
+A polling website, powered by Django (v4.2.9), which is featured on its [official documentation](https://docs.djangoproject.com/en/4.2/intro/tutorial01/).
 
 <br>
 
