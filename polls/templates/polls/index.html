@@ -1,18 +1,26 @@
-{% comment %} The {% static %} template tag generates the absolute URL of static
-files. {% endcomment %} {% load static %}
+{% comment %} 
+  The {% static %} template tag generates the absolute URL of static files.
+{% endcomment %}
 
+{% load static %}
 <link rel="stylesheet" href="{% static 'polls/style.css' %}" />
 
+<h3>Polling Questions</h3>
+
 {% if latest_question_list %}
-<ul>
-  {% for question in latest_question_list %}
-  <li>
-    <a href="{% url 'polls:detail' question.id %}">
-      {{ question.question_text }}
-    </a>
-  </li>
-  {% endfor %}
-</ul>
+  <ul>
+    {% for question in latest_question_list %}
+      <li>
+        <a href="{% url 'polls:detail' question.id %}">
+          {{ question.question_text }}
+        </a>
+      </li>
+    {% empty %}
+      <li>
+        Currently no question is available...
+      </li>
+    {% endfor %}
+  </ul>
 {% else %}
-<p>No polls are available..</p>
+  <p>No polls are available..</p>
 {% endif %}
