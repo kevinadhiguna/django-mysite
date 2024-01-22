@@ -1,7 +1,9 @@
 <h1>{{ question.question_text}}</h1>
 <ul>
   {% for choice in question.choice_set.all %}
-  <li>{{ choice.choice_text }}</li>
+    <li>
+      {{ choice.choice_text }}
+    </li>
   {% endfor %}
 </ul>
 
@@ -9,23 +11,36 @@
   {% csrf_token %}
   <fieldset>
     <legend>
-      <h1>{{ question.question_text }}</h1>
+      <!-- <h1>{{ question.question_text }}</h1> -->
+      <h3>Options</h3>
     </legend>
+
     {% if error_message %}
-    <p>
-      <strong>{{ error_message }}</strong>
-    </p>
-    {% endif %} {% for choice in question.choice_set.all%} {% comment %}
-    'forloop.counter' indicates how many times the for tag has gone through its
-    loop (just like 'i' in 'for(int i=0; i++; i<10) {...}') {% endcomment %}
-    <input
-      type="radio"
-      name="choice"
-      id="choice{{ forloop.counter }}"
-      value="{{ choice.id }}" />
-    <label for="choice{{ forloop.counter }}"> {{ choice.choice_text }} </label>
-    <br />
+      <p>
+        <strong>{{ error_message }}</strong>
+      </p>
+    {% endif %}
+    
+    {% for choice in question.choice_set.all%} 
+      {% comment %}
+        'forloop.counter' indicates how many times the for tag has gone through its
+        loop (just like 'i' in 'for(int i=0; i++; i<10) {...}')
+      {% endcomment %}
+
+      <input
+        type="radio"
+        name="choice"
+        id="choice{{ forloop.counter }}"
+        value="{{ choice.id }}"
+      />
+      <label for="choice{{ forloop.counter }}">
+        {{ choice.choice_text }}
+      </label>
+      <br />
     {% endfor %}
   </fieldset>
+
+  <br>
+  
   <input type="submit" value="Vote" />
 </form>
