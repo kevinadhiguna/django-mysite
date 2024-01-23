@@ -108,12 +108,13 @@ You will then by asked several questions, such as `username`, `email`, and `pass
 python3 manage.py runserver
 ```
 
-9. Voila! Visit [http://localhost:8000/polls](http://localhost:8000/polls) on your browser
+9. Voila! Visit http://localhost:8000/polls on your browser
 
 <br>
 
 ## To-do list
 
+- Put available routes in the docs
 - Make a Dockerfile
 - Improve site title in base_site.html
 - Utilize `python-dotenv` package to store environment variables ✅
@@ -125,3 +126,7 @@ python3 manage.py runserver
 
 - [Writing your first Django app](https://docs.djangoproject.com/en/4.2/intro/tutorial01/)
 - [Advanced tutorial: How to write reusable apps](https://docs.djangoproject.com/en/4.2/intro/reusable-apps/)
+
+<br>
+
+![Hello !](https://api.visitorbadge.io/api/VisitorHit?user=kevinadhiguna&repo=django-mysite&label=thanks%20for%20dropping%20in%20!&labelColor=%23000000&countColor=%23FFFFFF)
