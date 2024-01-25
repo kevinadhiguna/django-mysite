@@ -49,6 +49,8 @@ ALLOWED_HOSTS = []
 #     in your mysite/settings.py file 
 INSTALLED_APPS = [
     'polls.apps.PollsConfig', # Calling 'PollsConfig' class in polls/apps.py
+    # Addition
+    'multi_captcha_admin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
