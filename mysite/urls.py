@@ -20,5 +20,6 @@ from django.urls import include, path
 urlpatterns = [
   path('admin/', admin.site.urls), # normal admin
   path('admin/defender/', include('defender.urls')), # (Addition) django-defender admin
+  path('captcha/', include('captcha.urls')), # Admin panel captcha
   path('polls/', include('polls.urls')),
 ]
