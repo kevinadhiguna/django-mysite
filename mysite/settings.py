@@ -59,7 +59,15 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Addition
     'defender',
+    'captcha',
 ]
+
+# Captcha egnine to use
+# https://github.com/a-roomana/django-multi-captcha-admin?tab=readme-ov-file#engines
+
+MULTI_CAPTCHA_ADMIN = {
+    'engine': 'simple-captcha',
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
